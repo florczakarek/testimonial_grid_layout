@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 :root {
   --primary-color: #733fc9;
   --secondary-color: #18202e;
@@ -13,7 +15,7 @@
 
 body {
   background-color: #edf2f8;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
 }
 
@@ -49,10 +51,16 @@ body {
 
 .card.third {
   grid-row: span 2;
+  color: var(--gray-color);
+}
+
+.card.fourth {
+  color: var(--gray-color);
 }
 
 .card.last {
   background: var(--secondary-color);
+  color: #fff;
   grid-column: span 2;
 }
 
@@ -132,10 +140,12 @@ body {
 
 .last .card__header p {
   color: var(--light-gray-color);
+  font-size: 14px;
 }
 
 .last .card__header h4 {
   color: #fff;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 768px) {
