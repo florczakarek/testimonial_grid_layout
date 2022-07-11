@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #733fc9;
+  --secondary-color: #18202e;
+  --gray-color: #49566b;
+  --light-gray-color: #a8aaad;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edf2f8;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #edf2f8;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card {
+  border: none;
+  padding: 26px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card.first {
+  background: var(--primary-color);
+  grid-column: span 2;
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 right 60px;
+  background-size: 120px;
+}
+
+.card.second {
+  background: var(--gray-color);
+}
+
+.card.third {
+  grid-row: span 2;
+}
+
+.card.last {
+  background: var(--secondary-color);
+  grid-column: span 2;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card__body {
+  color: #fff2ff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card__desc {
+  color: #fff2ff;
+}
+
+.second .card__desc {
+  color: var(--light-gray-color);
+}
+
+.first .card__header h4 {
+  color: #fde7ff;
+  font-size: 14px;
+}
+
+.first .card__header p {
+  color: #b78bfe;
+  font-size: 14px;
+}
+
+.card__header img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid #a47dd3;
+}
+
+.second .card__header h4 {
+  color: #fde7ff;
+  font-size: 14px;
+}
+
+.second .card__header p {
+  color: var(--light-gray-color);
+  font-size: 14px;
+}
+
+.third .card__header h4,
+.fourth .card__header h4 {
+  color: var(--gray-color);
+  font-size: 14px;
+}
+
+.third .card__header p,
+.fourth .card__header p {
+  color: var(--light-gray-color);
+  font-size: 14px;
+}
+
+.third .card__body,
+.fourth .card__body {
+  color: var(--gray);
+}
+
+.third .card__desc,
+.fourth .card__desc {
+  color: var(--light-gray-color);
+}
+.last .card__desc {
+  color: var(--light-gray-color);
+}
+
+.last .card__header p {
+  color: var(--light-gray-color);
+}
+
+.last .card__header h4 {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .second {
+    grid-column: span 2;
+  }
+
+  .third {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+
+  .fourth {
+    grid-column: span 2;
+  }
+}
